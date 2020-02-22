@@ -11,11 +11,6 @@
 
     --font-heading: 'Georgia', Times, Times New Roman, serif;
     --font-default: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-
-    /* RESPONSIVE BREAKPOINTS */
-    --bp-l: 61.25em;  /* 980px */
-    --bp-m: 58em;    /* 768px */
-    --bp-s: 40em;     /* 640px */
 }
 
 /* ========== COMMON ========== */
@@ -31,13 +26,6 @@ html {
     box-sizing: border-box;
     font-size: 50%; /* 8px/16px = 50% -> 1rem = 8px */
 }
-
-@media only screen and (min-width: 641px) {
-    html {
-        font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
-    }
-}
-
 
 body {
     font-family: var(--font-default);
@@ -78,16 +66,7 @@ h1 {
     align-items: center;
 }
 
-@media only screen and (min-width: 641px) {
-    .header-contents {
-        max-width: 96rem;
-        margin: 0 auto;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-}
-
-div.name {
+.header-contents .name {
     width: 100%;
     padding: 1.5rem;
     color: var(--color-white);
@@ -98,31 +77,14 @@ div.name {
     text-align: center;
 }
 
-@media only screen and (min-width: 641px) {
-    .name {
-        width: unset !important;
-        padding: 1.5rem 4rem;
-    }
-}
-
 .navigation {
     padding: 1rem;
     list-style: none;
     display: flex;
 }
-@media only screen and (min-width: 641px) {
-    .navigation {
-        padding: 0;
-    }
-}
 
 .navigation li {
     padding: 0 2rem;
-}
-@media only screen and (min-width: 641px) {
-    .navigation li {
-        padding: 0 1.5rem;
-    }
 }
 
 .navigation li:not(:last-of-type) {
@@ -153,11 +115,6 @@ div.name {
     padding: 3rem;
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray2);
-}
-@media only screen and (min-width: 641px) {
-    .container {
-        max-width: 96rem;
-    }
 }
 
 
@@ -192,12 +149,7 @@ div.name {
     width: 100%;
     margin: 0 2rem 1rem 0;
 }
-@media only screen and (min-width: 641px) {
-    .my-photo {
-        max-width: 50%;
-        float: left;
-    }
-}
+
 
 /* ========== PORTFOLIO ========== */
 .portfolio-list {
@@ -205,20 +157,10 @@ div.name {
     display: flex;
     flex-wrap: wrap;
 }
-@media only screen and (min-width: 641px) {
-    .portfolio-list {
-        justify-content: space-between;
-    }
-}
 
 .portfolio-list li {
     width: 100%;
     position: relative;
-}
-@media only screen and (min-width: 641px) {
-    .portfolio-list li {
-        width: calc((100% - 3rem) / 2);
-    }
 }
 
 .portfolio-link {
@@ -247,12 +189,6 @@ div.name {
     background-color: var(--color-teal);
     transition: background-color .3s;
 }
-@media only screen and (min-width: 641px) {
-    .portfolio-title {
-        padding: .8rem;
-        font-size: 1.8rem;
-    }
-}
 
 .portfolio-link:hover .portfolio-title {
     background-color: var(--color-orange);
@@ -261,11 +197,6 @@ div.name {
 .portfolio-list li img {
     width: 100%;
     display: block;
-}
-@media only screen and (min-width: 641px) {
-    .portfolio-list li img {
-        max-width: 100%;
-    }
 }
 
 /* ========== CONTACT ========== */
@@ -312,13 +243,64 @@ div.name {
 }
 
 @media screen and (min-width: 641px) {
+/* width: 641px to 768px */
+    html {
+        font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+    }
 
+    .my-photo {
+        max-width: 50%;
+        float: left;
+    }
+
+    .header-contents {
+        max-width: 96rem;
+        margin: 0 auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .header-contents .name {
+        width: unset !important;
+        padding: 1.5rem 4rem;
+    }
+
+    .navigation {
+        padding: 0;
+    }
+
+    .navigation li {
+        padding: 0 1.5rem;
+    }
+
+    .container {
+        max-width: 96rem;
+    }
+
+    .portfolio-list {
+        justify-content: space-between;
+    }
+
+    .portfolio-list li {
+        width: calc((100% - 3rem) / 2);
+    }
+
+    .portfolio-title {
+        padding: .8rem;
+        font-size: 1.8rem;
+    }
+
+    .portfolio-list li img {
+        max-width: 100%;
+    }
 }
 
 @media screen and (min-width: 769px) {
+/* width: 769px to 980px */
 
 }
 
 @media screen and (min-width: 981px) {
+/* width: 980px to */
 
 }
