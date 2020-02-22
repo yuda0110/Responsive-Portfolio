@@ -141,6 +141,10 @@ div.name {
     color: var(--color-orange);
 }
 
+.active {
+    font-weight: bold;
+}
+
 
 /* ========== MAIN CONTENTS ========== */
 .container {
