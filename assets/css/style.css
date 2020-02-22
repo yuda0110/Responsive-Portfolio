@@ -141,18 +141,23 @@ div.name {
     color: var(--color-orange);
 }
 
-.active {
+.nav-link.active {
     font-weight: bold;
 }
 
 
 /* ========== MAIN CONTENTS ========== */
 .container {
-    width: 960px;
+    width: calc(100% - 6rem);
     margin: 3rem auto 10rem;
     padding: 3rem;
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray2);
+}
+@media only screen and (min-width: 641px) {
+    .container {
+        max-width: 96rem;
+    }
 }
 
 
