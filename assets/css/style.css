@@ -11,15 +11,33 @@
 
     --font-heading: 'Georgia', Times, Times New Roman, serif;
     --font-default: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
-}
 
+    /* RESPONSIVE BREAKPOINTS */
+    --bp-l: 61.25em;  /* 980px */
+    --bp-m: 58em;    /* 768px */
+    --bp-s: 40em;     /* 640px */
+}
 
 /* ========== COMMON ========== */
-*{
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
+
+html {
+    box-sizing: border-box;
+    font-size: 50%; /* 8px/16px = 50% -> 1rem = 8px */
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 62.5%; /* 10px/16px = 62.5% -> 1rem = 10px */
+    }
+}
+
 
 body {
     font-family: var(--font-default);
@@ -27,6 +45,7 @@ body {
     background: url("../images/leaves-pattern.png") repeat;
     color: var(--color-dark-gray1);
     position: relative;
+    font-size: 1.6rem;
 }
 
 h1,
@@ -36,10 +55,10 @@ h3 {
 }
 
 h1 {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     color: var(--color-teal);
-    font-size: 30px;
-    padding-bottom: 20px;
+    font-size: 3rem;
+    padding-bottom: 2rem;
     border-bottom: 3px solid var(--color-light-gray2);
     line-height: 1;
 }
@@ -61,11 +80,11 @@ h1 {
 }
 
 div.name {
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     color: var(--color-white);
     background-color: var(--color-teal);
     font-family: var(--font-heading);
-    font-size: 36px;
+    font-size: 3.6rem;
     font-weight: bold;
 }
 
@@ -75,11 +94,11 @@ div.name {
 }
 
 .navigation li {
-    padding-left: 15px;
+    padding-left: 1.5rem;
 }
 
 .navigation li:not(:last-of-type) {
-    padding-right: 15px;
+    padding-right: 1.5rem;
     border-right: 1px solid var(--color-light-gray1);
 }
 
@@ -99,8 +118,8 @@ div.name {
 /* ========== MAIN CONTENTS ========== */
 .container {
     width: 960px;
-    margin: 30px auto 100px;
-    padding: 30px;
+    margin: 3rem auto 10rem;
+    padding: 3rem;
     background-color: var(--color-white);
     border: 1px solid var(--color-light-gray2);
 }
@@ -109,18 +128,18 @@ div.name {
 /* ========== FOOTER ========== */
 .footer {
     width: 100%;
-    padding: 30px 10px 10px;
+    padding: 3rem 10rem;
     background-color: var(--color-dark-gray2);
-    border-top: 8px solid var(--color-teal);
+    border-top: .8rem solid var(--color-teal);
     text-align: center;
     color: var(--color-white);
-    font-size: 12px;
+    font-size: 1.2rem;
     position: fixed;
     bottom: 0;
     left: 0;
     z-index: 100;
-    -webkit-box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
-    box-shadow: 0 0 10px 3px rgba(0,0,0,0.4);
+    -webkit-box-shadow: 0 0 1rem .3rem rgba(0,0,0,0.4);
+    box-shadow: 0 0 1rem .3rem rgba(0,0,0,0.4);
 }
 
 /* ========== ABOUT ME ========== */
@@ -130,7 +149,7 @@ div.name {
 }
 
 .my-photo {
-    margin: 0 20px 10px 0;
+    margin: 0 2rem 1rem 0;
     float: left;
 }
 
@@ -142,7 +161,7 @@ div.name {
 }
 
 .portfolio-list li {
-    margin-right: 46px;
+    margin-right: 4.6rem;
     position: relative;
 }
 
@@ -156,17 +175,17 @@ div.name {
 }
 
 .portfolio-list li:not(:last-of-type) {
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
 }
 
 .portfolio-title {
     width: 100%;
-    padding: 10px;
+    padding: 1rem;
     position: absolute;
-    bottom: 20px;
+    bottom: 2rem;
     left: 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 2.4rem;
     color: var(--color-white);
     font-weight: normal;
     background-color: var(--color-teal);
@@ -179,7 +198,7 @@ div.name {
 
 /* ========== CONTACT ========== */
 .contact-item {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .contact-form label,
@@ -188,29 +207,29 @@ div.name {
 }
 
 .contact-form label {
-    margin-bottom: 5px;
+    margin-bottom: .5rem;
 }
 
 .input-text {
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
+    padding: 1rem;
+    font-size: 1.6rem;
     border: 1px solid var(--color-light-gray3);
 }
 
 .contact-form textarea {
     width: 100%;
-    height: 100px;
-    padding: 10px;
-    font-size: 16px;
+    height: 10rem;
+    padding: 1rem;
+    font-size: 1.6rem;
     border: 1px solid var(--color-light-gray3);
 }
 
 .submit-btn {
     color: var(--color-white);
     background-color: var(--color-teal);
-    padding: 10px 30px;
-    font-size: 16px;
+    padding: 1rem 3rem;
+    font-size: 1.6rem;
     cursor: pointer;
     transition: background-color .3s;
 }
@@ -218,4 +237,16 @@ div.name {
 .submit-btn:hover,
 .submit-btn:focus {
     background-color: var(--color-orange);
+}
+
+@media screen and (min-width: 640px) {
+
+}
+
+@media screen and (min-width: 768px) {
+
+}
+
+@media screen and (min-width: 980px) {
+
 }
