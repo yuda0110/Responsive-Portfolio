@@ -6,8 +6,8 @@
     --color-light-gray1: #dedede;
     --color-light-gray2: #ddd;
     --color-light-gray3: #ccc;
-    --color-dark-gray1: #777;
-    --color-dark-gray2: #666;
+    --color-dark-gray1: #555555;
+    --color-dark-gray2: #333333;
 
     --font-heading: 'Georgia', Times, Times New Roman, serif;
     --font-default: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
@@ -148,6 +148,45 @@ h1 {
 .my-photo {
     width: 100%;
     margin: 0 2rem 1rem 0;
+}
+
+.my-links {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 3px dotted var(--color-teal);
+    border-radius: 1rem;
+}
+
+.my-links li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.my-links li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.my-links ion-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-right: .5rem;
+}
+
+.my-links a:link,
+.my-links a:visited {
+    color: var(--color-teal);
+    text-decoration: none;
+}
+
+.my-links a:hover,
+.my-links a:focus {
+    color: var(--color-teal);
+    border-bottom: 1px solid var(--color-teal);
+}
+
+.my-links span {
+    font-weight: bold;
 }
 
 
