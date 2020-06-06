@@ -248,6 +248,7 @@ h1 {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .portfolio-button.left {
@@ -304,6 +305,7 @@ h1 {
     font-size: 1.6rem;
     cursor: pointer;
     transition: background-color .3s;
+    border: 0;
 }
 
 .submit-btn:hover,
