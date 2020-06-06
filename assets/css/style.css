@@ -202,41 +202,71 @@ h1 {
     position: relative;
 }
 
-.portfolio-link {
-    opacity: 1;
-    transition: opacity .3s;
-}
-
-.portfolio-link:hover {
-    opacity: .7;
-}
-
 .portfolio-list li:not(:last-of-type) {
     margin-bottom: 3rem;
 }
 
 .portfolio-title {
-    width: 100%;
-    padding: 1rem;
-    position: absolute;
-    bottom: 2rem;
-    left: 0;
+    margin-bottom: .5rem;
     text-align: center;
-    font-size: 2.2rem;
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.portfolio-title a {
+    color: var(--color-dark-gray2);
+    transition: opacity .3s;
+}
+
+.portfolio-title a:hover,
+.portfolio-title a:focus {
+    color: var(--color-dark-gray1);
+}
+
+.portfolio-item-container {
+    width: 100%;
+    position: relative;
+}
+
+.portfolio-item-container img {
+    width: 100%;
+    display: block;
+}
+
+.portfolio-button {
+    width: 42%;
+    padding: .6rem 0;
+    position: absolute;
+    bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
     color: var(--color-white);
     font-weight: normal;
     background-color: var(--color-teal);
     transition: background-color .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
-.portfolio-link:hover .portfolio-title {
+.portfolio-button.left {
+    left: 5%;
+}
+
+.portfolio-button.right {
+    right: 5%;
+}
+
+.portfolio-button:hover,
+.portfolio-button:focus {
     background-color: var(--color-orange);
 }
 
-.portfolio-list li img {
-    width: 100%;
-    display: block;
+.portfolio-button ion-icon {
+    margin-right: 1rem;
 }
+
 
 /* ========== CONTACT ========== */
 .contact-item {
@@ -324,13 +354,12 @@ h1 {
         width: calc((100% - 3rem) / 2);
     }
 
-    .portfolio-title {
-        padding: .8rem;
-        font-size: 1.8rem;
+    .portfolio-item-container img {
+        max-width: 100%;
     }
 
-    .portfolio-list li img {
-        max-width: 100%;
+    .portfolio-button {
+        font-size: 1.5rem;
     }
 }
 
